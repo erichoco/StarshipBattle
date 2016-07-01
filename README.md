@@ -2,6 +2,8 @@
 
 **Starship Battle** is a scrolling shooter game adapted from **[Sorades 13K][1]** for [Mini GaussSense][2] + [GaussSense Desktop][3].
 
+![Alt text](https://gausstoys.s3-ap-northeast-1.amazonaws.com/uploads/project_attachment/attachment/24/starship-battle.jpg)
+
 SORADES 13K is a [Gramambo game][4]
 by [Thiemo M&auml;ttig][5] (licensed under a Creative [Commons Attribution-ShareAlike 3.0 Germany License][6]
 (CC-BY-SA-3.0-DE)).
