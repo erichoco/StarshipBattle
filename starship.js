@@ -818,7 +818,6 @@ document.onkeyup = function(e) {
 var gs = new GaussSense();
 
 function gameloop() {
-    console.log(gs.isConnected());
     if (!gs.isConnected()) {
         spawnText('GaussSense\nNot Detected', 1);
         return;
@@ -828,17 +827,20 @@ function gameloop() {
     // x
     keys[88] = (mid.intensity > 0);
     // up
-    keys[38] = (mid.y < 0.35 && mid.y > 0);
+    keys[38] = (mid.y < 0.3 && mid.y > 0);
     // down
-    keys[40] = (mid.y > 0.65);
+    keys[40] = (mid.y > 0.7);
     // right
-    keys[37] = (mid.x < 0.35 && mid.x > 0);
+    keys[37] = (mid.x < 0.3 && mid.x > 0);
     // left
-    keys[39] = (mid.x > 0.65);
+    keys[39] = (mid.x > 0.7);
 
-    ship.angle = mid.pitch / 5;
-    var xAngle = Math.sin(ship.angle / 22 * Math.PI);
-    var yAngle = Math.cos(ship.angle / 22 * Math.PI);
+    ship.angle = mid.angle * 180 / Math.PI / (90/11);
+    console.log(ship.angle);
+    // var xAngle = Math.sin(ship.angle / 22 * Math.PI);
+    var xAngle = Math.sin(mid.angle);
+    // var yAngle = Math.cos(ship.angle / 22 * Math.PI);
+    var yAngle = Math.cos(mid.angle);
 
     if (l.paused)
         return;
